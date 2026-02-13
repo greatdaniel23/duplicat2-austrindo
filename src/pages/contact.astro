@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us | Austrindo Law Office">
+	<section class="bg-blue-900 text-white py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+			<p class="text-xl max-w-2xl mx-auto text-blue-100">Your path to clarity and resolution starts with a single conversation.</p>
+		</div>
+	</section>
+
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+				
+				<!-- Contact Info -->
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+					<p class="text-lg text-gray-700 mb-8 leading-relaxed">
+						We understand that navigating legal matters can be complex and challenging. Our team of experienced attorneys is dedicated to providing you with the support and guidance you need.
+					</p>
+					
+					<div class="space-y-6">
+						<div class="flex items-start">
+							<div class="flex-shrink-0">
+								<svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+							</div>
+							<div class="ml-4">
+								<h3 class="text-lg font-medium text-gray-900">Office</h3>
+								<p class="mt-1 text-gray-600">
+									Austrindo Law Office<br>
+									Jalan Raya Kuta No. 58 D-E Kuta,<br>
+									Denpasar, Bali, Indonesia
+								</p>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<div class="flex-shrink-0">
+								<svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+								</svg>
+							</div>
+							<div class="ml-4">
+								<h3 class="text-lg font-medium text-gray-900">Email</h3>
+								<p class="mt-1 text-gray-600">
+									<a href="mailto:info@austrindolawoffice.com" class="hover:text-blue-600 transition">info@austrindolawoffice.com</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact Form -->
+				<div class="bg-gray-50 p-8 rounded-lg shadow-md">
+					<form action="#" method="POST" class="space-y-6">
+						<div>
+							<label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+							<input type="text" name="name" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" placeholder="John Doe">
+						</div>
+
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+							<input type="email" name="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" placeholder="you@example.com">
+						</div>
+
+						<div>
+							<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+							<textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" placeholder="How can we help you?"></textarea>
+						</div>
+
+						<div>
+							<button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+								Send Message
+							</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</Layout>

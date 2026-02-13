@@ -24,11 +24,28 @@ const { title } = Astro.props;
 						<a href="/" class="text-2xl font-bold text-blue-900">Austrindo</a>
 					</div>
 					<nav class="hidden md:flex space-x-8">
-						<a href="#about" class="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
-						<a href="#services" class="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-						<a href="#team" class="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium">Our Team</a>
-						<a href="#contact" class="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition">Contact Us</a>
+						<a href="/#about" class="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+						<a href="/services" class="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+						<a href="/team" class="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium">Our Team</a>
+						<a href="/contact" class="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition">Contact Us</a>
 					</nav>
+					<!-- Mobile Menu Button (Hamburger) -->
+					<div class="md:hidden flex items-center">
+						<button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-900 focus:outline-none">
+							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+					<a href="/#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">About</a>
+					<a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">Services</a>
+					<a href="/team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">Our Team</a>
+					<a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-900 text-white hover:bg-blue-800">Contact Us</a>
 				</div>
 			</div>
 		</header>
@@ -44,9 +61,10 @@ const { title } = Astro.props;
 				<div>
 					<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
 					<ul class="space-y-2 text-sm text-gray-400">
-						<li><a href="#about" class="hover:text-white">About Us</a></li>
-						<li><a href="#services" class="hover:text-white">Services</a></li>
-						<li><a href="#team" class="hover:text-white">Our Team</a></li>
+						<li><a href="/#about" class="hover:text-white">About Us</a></li>
+						<li><a href="/services" class="hover:text-white">Services</a></li>
+						<li><a href="/team" class="hover:text-white">Our Team</a></li>
+						<li><a href="/contact" class="hover:text-white">Contact Us</a></li>
 					</ul>
 				</div>
 				<div>
@@ -59,5 +77,14 @@ const { title } = Astro.props;
 				&copy; {new Date().getFullYear()} Austrindo Law Office. All rights reserved.
 			</div>
 		</footer>
+
+		<script>
+			const btn = document.getElementById('mobile-menu-btn');
+			const menu = document.getElementById('mobile-menu');
+
+			btn?.addEventListener('click', () => {
+				menu?.classList.toggle('hidden');
+			});
+		</script>
 	</body>
 </html>

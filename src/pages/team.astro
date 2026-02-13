@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Team | Austrindo Law Office">
+	<section class="bg-blue-900 text-white py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl font-bold mb-4">Meet Our Team</h1>
+			<p class="text-xl max-w-2xl mx-auto text-blue-100">Our experienced attorneys and legal professionals are dedicated to providing you with the best legal representation.</p>
+		</div>
+	</section>
+
+	<!-- Senior Lawyers -->
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 border-b pb-4">Senior Lawyers</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				{[
+					{ name: "H. M. Ali Sadikin, S.H.", role: "Senior Lawyer" },
+					{ name: "H. Daniar Trisasongko, S.H., M.Hum", role: "Senior Lawyer" },
+					{ name: "Heru, S.T., S.H., M.Hum", role: "Senior Lawyer" },
+					{ name: "Drs. Iwan Prasodjo, S.H., M.H.", role: "Senior Lawyer" }
+				].map((member) => (
+					<div class="bg-gray-50 p-6 rounded-lg text-center shadow-sm hover:shadow-md transition">
+						<div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center text-gray-500 text-2xl font-bold">
+							{member.name.charAt(0)}
+						</div>
+						<h3 class="text-lg font-bold text-gray-900">{member.name}</h3>
+						<p class="text-sm text-blue-600">{member.role}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Lawyers -->
+	<section class="py-20 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 border-b pb-4">Lawyers</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				{[
+					{ name: "Rico Ardika Panjaitan, S.H.", role: "Lawyer" },
+					{ name: "Nicholas Leksono, S.H., LLM., CCD.", role: "Lawyer" },
+					{ name: "Ni Kadek Erlina Wijayahti, S.H.", role: "Lawyer" },
+					{ name: "Aditya Fatra, S.HI., M.H.", role: "Lawyer" }
+				].map((member) => (
+					<div class="bg-white p-6 rounded-lg text-center shadow-sm hover:shadow-md transition">
+						<div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-gray-500 text-2xl font-bold">
+							{member.name.charAt(0)}
+						</div>
+						<h3 class="text-lg font-bold text-gray-900">{member.name}</h3>
+						<p class="text-sm text-blue-600">{member.role}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Legal Officers -->
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 border-b pb-4">Legal Officers</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				{[
+					{ name: "Mian Martalena Josephine Nababan", role: "Legal Officer" },
+					{ name: "Shanen Burgundy, S.H.", role: "Legal Officer" },
+					{ name: "Ni Nengah Bintang Lestari, S.H.", role: "Legal Officer" }
+				].map((member) => (
+					<div class="bg-gray-50 p-6 rounded-lg text-center shadow-sm hover:shadow-md transition">
+						<div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-gray-500 text-2xl font-bold">
+							{member.name.charAt(0)}
+						</div>
+						<h3 class="text-lg font-bold text-gray-900">{member.name}</h3>
+						<p class="text-sm text-blue-600">{member.role}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+</Layout>
