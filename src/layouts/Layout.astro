@@ -15,42 +15,55 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<!-- Google Fonts: Merriweather (Serif for Headings) & Inter (Sans for Body) -->
+		<!-- Google Fonts: Playfair Display (Luxury Serif) & Lato (Clean Sans) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
-		<header class="bg-white shadow-sm sticky top-0 z-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between items-center h-20">
-					<!-- Logo Area -->
+	<body class="bg-stone-50 text-stone-900 font-sans antialiased flex flex-col min-h-screen">
+		
+		<!-- Top Bar (Contact Info) -->
+		<div class="bg-slate-900 text-slate-300 text-xs py-2 hidden md:block border-b border-slate-800">
+			<div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+				<div class="flex space-x-6">
+					<span class="flex items-center gap-2"><svg class="w-3 h-3 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg> info@austrindolawoffice.com</span>
+					<span class="flex items-center gap-2"><svg class="w-3 h-3 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg> Kuta, Bali, Indonesia</span>
+				</div>
+				<div class="flex space-x-4">
+					<a href="#" class="hover:text-white transition">Facebook</a>
+					<a href="#" class="hover:text-white transition">LinkedIn</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Header -->
+		<header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300" id="navbar">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="flex justify-between items-center h-24">
+					<!-- Logo -->
 					<div class="flex-shrink-0 flex items-center">
-						<a href="/" class="flex items-center gap-2">
-							<!-- Placeholder for Logo Image -->
-							<!-- <img src="/logo.png" alt="Austrindo Logo" class="h-10 w-auto" /> -->
-							<div class="flex flex-col">
-								<span class="text-2xl font-serif font-black text-blue-900 tracking-tight leading-none">AUSTRINDO</span>
-								<span class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Law Office</span>
-							</div>
+						<a href="/" class="group flex flex-col justify-center">
+							<span class="text-3xl font-serif font-bold text-slate-900 tracking-wide group-hover:text-amber-700 transition-colors duration-300 leading-none">AUSTRINDO</span>
+							<span class="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-medium mt-1 group-hover:text-slate-700 transition-colors">Law Office</span>
 						</a>
 					</div>
 					
 					<!-- Desktop Nav -->
-					<nav class="hidden md:flex space-x-8 items-center">
-						<a href="/#about" class="text-gray-600 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-						<a href="/services" class="text-gray-600 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-						<a href="/team" class="text-gray-600 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Team</a>
-						<a href="/contact" class="bg-blue-900 text-white px-5 py-2.5 rounded-sm text-sm font-bold hover:bg-blue-800 transition-all shadow-sm hover:shadow-md">
+					<nav class="hidden md:flex items-center space-x-1">
+						<a href="/" class="text-stone-600 hover:text-amber-700 px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-300">Home</a>
+						<a href="/#about" class="text-stone-600 hover:text-amber-700 px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-300">About</a>
+						<a href="/services" class="text-stone-600 hover:text-amber-700 px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-300">Practice Areas</a>
+						<a href="/team" class="text-stone-600 hover:text-amber-700 px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-300">Attorneys</a>
+						<a href="/contact" class="ml-4 bg-slate-900 text-white px-6 py-3 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-amber-700 transition-all duration-300 shadow-lg hover:shadow-amber-900/20">
 							Contact Us
 						</a>
 					</nav>
 
 					<!-- Mobile Menu Button -->
 					<div class="md:hidden flex items-center">
-						<button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-900 focus:outline-none p-2">
-							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						<button id="mobile-menu-btn" class="text-stone-800 hover:text-amber-700 focus:outline-none p-2 transition-colors">
+							<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
 							</svg>
 						</button>
 					</div>
@@ -58,12 +71,13 @@ const { title } = Astro.props;
 			</div>
 
 			<!-- Mobile Menu -->
-			<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-				<div class="px-4 pt-2 pb-4 space-y-1">
-					<a href="/#about" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-50">About</a>
-					<a href="/services" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-50">Services</a>
-					<a href="/team" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-50">Our Team</a>
-					<a href="/contact" class="block px-3 py-3 rounded-md text-base font-medium text-blue-900 font-bold hover:bg-gray-50">Contact Us</a>
+			<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-100 absolute w-full shadow-xl">
+				<div class="px-6 py-6 space-y-4">
+					<a href="/" class="block text-lg font-serif font-medium text-stone-800 hover:text-amber-700">Home</a>
+					<a href="/#about" class="block text-lg font-serif font-medium text-stone-800 hover:text-amber-700">About Firm</a>
+					<a href="/services" class="block text-lg font-serif font-medium text-stone-800 hover:text-amber-700">Practice Areas</a>
+					<a href="/team" class="block text-lg font-serif font-medium text-stone-800 hover:text-amber-700">Our Attorneys</a>
+					<a href="/contact" class="block w-full text-center bg-slate-900 text-white py-3 mt-4 font-bold uppercase tracking-widest hover:bg-amber-700 transition-colors">Contact Us</a>
 				</div>
 			</div>
 		</header>
@@ -72,38 +86,49 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 
-		<footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
-				<div class="col-span-1 md:col-span-2">
-					<h3 class="text-2xl font-serif font-bold mb-6 text-white">AUSTRINDO</h3>
-					<p class="text-slate-400 text-sm leading-relaxed max-w-sm">
-						Austrindo Law Office has 20 years of expertise and is trusted by many foreign and local investors in Indonesia. High Quality Legal Services for Indonesians & Foreigners.
+		<footer class="bg-slate-900 text-white py-20 border-t-4 border-amber-600">
+			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+				<div class="col-span-1 md:col-span-2 pr-8">
+					<h3 class="text-3xl font-serif font-bold mb-6 text-white tracking-wide">AUSTRINDO</h3>
+					<p class="text-slate-400 text-sm leading-7 max-w-md font-light mb-6">
+						With over 20 years of expertise, we are trusted by foreign and local investors alike. We provide high-quality legal services tailored to the unique challenges of Indonesia's dynamic legal landscape.
 					</p>
+					<div class="flex space-x-4">
+						<!-- Social Icons Placeholder -->
+						<div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-amber-600 hover:text-white transition-all cursor-pointer">FB</div>
+						<div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-amber-600 hover:text-white transition-all cursor-pointer">LI</div>
+						<div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-amber-600 hover:text-white transition-all cursor-pointer">IG</div>
+					</div>
 				</div>
 				<div>
-					<h3 class="text-sm font-bold uppercase tracking-wider mb-6 text-slate-300">Quick Links</h3>
-					<ul class="space-y-3 text-sm text-slate-400">
-						<li><a href="/#about" class="hover:text-white transition-colors">About Us</a></li>
-						<li><a href="/services" class="hover:text-white transition-colors">Services</a></li>
-						<li><a href="/team" class="hover:text-white transition-colors">Our Team</a></li>
-						<li><a href="/contact" class="hover:text-white transition-colors">Contact Us</a></li>
+					<h3 class="text-sm font-bold uppercase tracking-widest mb-8 text-amber-500">Practice Areas</h3>
+					<ul class="space-y-4 text-sm text-slate-300 font-light">
+						<li><a href="/services" class="hover:text-white hover:translate-x-1 transform transition-all inline-block">Corporate & Business</a></li>
+						<li><a href="/services" class="hover:text-white hover:translate-x-1 transform transition-all inline-block">Property Law</a></li>
+						<li><a href="/services" class="hover:text-white hover:translate-x-1 transform transition-all inline-block">Immigration</a></li>
+						<li><a href="/services" class="hover:text-white hover:translate-x-1 transform transition-all inline-block">Civil Litigation</a></li>
+						<li><a href="/services" class="hover:text-white hover:translate-x-1 transform transition-all inline-block">Criminal Defense</a></li>
 					</ul>
 				</div>
 				<div>
-					<h3 class="text-sm font-bold uppercase tracking-wider mb-6 text-slate-300">Contact</h3>
-					<div class="text-slate-400 text-sm space-y-3">
-						<p class="flex items-start gap-3">
-							<svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-							<span>Jalan Raya Kuta No. 58 D-E<br>Kuta, Bali, Indonesia</span>
+					<h3 class="text-sm font-bold uppercase tracking-widest mb-8 text-amber-500">Contact Office</h3>
+					<div class="text-slate-300 text-sm space-y-6 font-light">
+						<p class="flex items-start gap-4">
+							<span class="mt-1 text-amber-500">📍</span>
+							<span>Jalan Raya Kuta No. 58 D-E<br>Kuta, Badung<br>Bali, Indonesia</span>
 						</p>
-						<p class="flex items-center gap-3">
-							<svg class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-							<a href="mailto:info@austrindolawoffice.com" class="hover:text-white transition-colors">info@austrindolawoffice.com</a>
+						<p class="flex items-center gap-4">
+							<span class="text-amber-500">✉️</span>
+							<a href="mailto:info@austrindolawoffice.com" class="hover:text-white transition-colors border-b border-slate-700 hover:border-white pb-0.5">info@austrindolawoffice.com</a>
+						</p>
+						<p class="flex items-center gap-4">
+							<span class="text-amber-500">📞</span>
+							<a href="tel:+628170902111" class="hover:text-white transition-colors border-b border-slate-700 hover:border-white pb-0.5">+62 817 090 2111</a>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+			<div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 text-center text-xs text-slate-600 uppercase tracking-widest">
 				&copy; {new Date().getFullYear()} Austrindo Law Office. All rights reserved.
 			</div>
 		</footer>
@@ -119,10 +144,15 @@ const { title } = Astro.props;
 		<style is:global>
 			/* Typography Defaults */
 			h1, h2, h3, h4, h5, h6 {
-				font-family: 'Merriweather', serif;
+				font-family: 'Playfair Display', serif;
 			}
 			body {
-				font-family: 'Inter', sans-serif;
+				font-family: 'Lato', sans-serif;
+			}
+			/* Custom selection color */
+			::selection {
+				background-color: #d97706; /* Amber-600 */
+				color: white;
 			}
 		</style>
 	</body>

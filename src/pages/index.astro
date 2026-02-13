@@ -2,115 +2,164 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Austrindo Law Office | High Quality Legal Services">
+<Layout title="Austrindo Law Office | Trusted Legal Counsel">
 	<!-- Hero Section -->
-	<section class="relative bg-slate-900 text-white min-h-[70vh] flex items-center justify-center overflow-hidden">
-		<!-- Background Image with Overlay -->
+	<section class="relative bg-slate-900 text-white min-h-[90vh] flex items-center justify-center overflow-hidden">
+		<!-- Background with Parallax Effect -->
 		<div class="absolute inset-0 z-0">
-			<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Law Office Background" class="w-full h-full object-cover opacity-30" />
-			<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/50"></div>
+			<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Executive Office" class="w-full h-full object-cover opacity-20 filter brightness-75 scale-105" />
+			<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
 		</div>
 		
-		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-			<h1 class="text-5xl md:text-7xl font-serif font-bold text-white tracking-tight leading-tight drop-shadow-lg">
-				Advocate & Curator
+		<div class="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-10 mt-16">
+			<span class="inline-block border border-amber-500/50 text-amber-500 bg-amber-900/10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-sm">Since 2003</span>
+			
+			<h1 class="text-6xl md:text-8xl font-serif font-black text-white tracking-tighter leading-tight drop-shadow-2xl">
+				Advocates <span class="text-amber-600 font-light italic">&</span> Curators
 			</h1>
-			<p class="text-xl md:text-2xl font-light text-slate-200 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-				High Quality Legal Services for Indonesians & Foreigners.
+			
+			<p class="text-xl md:text-2xl font-light text-slate-300 max-w-4xl mx-auto leading-relaxed tracking-wide font-sans">
+				Excellence in legal counsel for international investors and local enterprises.<br class="hidden md:inline"> Navigating Indonesia's dynamic landscape with precision.
 			</p>
-			<div class="pt-8">
-				<a href="/contact" class="inline-block bg-blue-800 hover:bg-blue-700 text-white font-semibold py-4 px-10 rounded shadow-xl transition-transform transform hover:-translate-y-1 duration-300 uppercase tracking-wider text-sm">
-					Get a Consultation
+			
+			<div class="pt-12 flex flex-col md:flex-row gap-6 justify-center items-center">
+				<a href="/contact" class="group relative inline-flex h-14 w-64 items-center justify-center overflow-hidden rounded-none border-2 border-amber-600 bg-transparent font-bold text-white shadow-2xl transition-all duration-300 hover:bg-amber-600 hover:text-white uppercase tracking-widest text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2">
+					<span class="mr-2">Schedule Consultation</span>
+					<svg class="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
 				</a>
+				<a href="#services" class="text-slate-400 hover:text-white transition-colors text-sm uppercase tracking-widest font-bold border-b border-transparent hover:border-white pb-1">Explore Practice Areas</a>
 			</div>
+		</div>
+
+		<!-- Scroll Down Indicator -->
+		<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+			<svg class="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
 		</div>
 	</section>
 
-	<!-- About Preview Section -->
-	<section id="about" class="py-24 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-				<div class="space-y-6">
-					<div class="inline-block border-b-4 border-blue-900 pb-2 mb-2">
-						<span class="text-blue-900 font-bold uppercase tracking-widest text-sm">About Us</span>
+	<!-- Introduction / About Snippet -->
+	<section id="about" class="py-32 bg-stone-50 relative">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+				<!-- Text Content -->
+				<div class="lg:col-span-5 space-y-10 sticky top-32">
+					<div class="space-y-4">
+						<h3 class="text-amber-700 font-bold uppercase tracking-[0.2em] text-sm">About The Firm</h3>
+						<h2 class="text-5xl font-serif font-bold text-slate-900 leading-[1.1]">
+							Unwavering Commitment to <span class="italic text-slate-600">Justice.</span>
+						</h2>
 					</div>
-					<h2 class="text-4xl font-serif font-bold text-slate-900 leading-tight">
-						20 Years of Expertise & Trust
-					</h2>
-					<p class="text-lg text-slate-600 leading-relaxed font-light">
-						Austrindo Law Office is trusted by many foreign and local investors in Indonesia. Our practice areas cover Corporate, Property, Immigration, General Civil, Crime, Arbitration, Family, Employment, Intellectual Property, and Investment.
-					</p>
-					<p class="text-lg text-slate-600 leading-relaxed font-light">
-						We have considerable experience in commercial, civil, criminal, and other legal settlement procedures, both in and out of court.
-					</p>
-					<div class="pt-4">
-						<a href="/team" class="text-blue-900 font-bold hover:text-blue-700 transition-colors flex items-center gap-2 group">
-							Meet Our Team 
-							<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+					<div class="w-20 h-1 bg-amber-600"></div>
+					<div class="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
+						<p>
+							<strong class="text-slate-900 font-semibold">Austrindo Law Office</strong> stands as a pillar of legal integrity in Indonesia. Trusted by multinational corporations and individual investors alike, we bridge the gap between complex regulations and your business objectives.
+						</p>
+						<p>
+							Whether navigating corporate mergers, property acquisitions, or intricate litigation, our team brings over two decades of specialized expertise to every case.
+						</p>
+					</div>
+					<div class="pt-6">
+						<a href="/team" class="inline-flex items-center text-slate-900 font-bold uppercase tracking-widest border-b-2 border-slate-900 hover:text-amber-700 hover:border-amber-700 transition-all pb-1 text-sm">
+							Meet Our Attorneys
 						</a>
 					</div>
 				</div>
-				<div class="relative">
-					<div class="absolute -inset-4 bg-blue-50 rounded-lg transform rotate-2 z-0"></div>
-					<img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Law Office Team" class="relative z-10 rounded-lg shadow-2xl w-full h-auto object-cover" />
+
+				<!-- Image Grid -->
+				<div class="lg:col-span-7 grid grid-cols-2 gap-6 relative">
+					<img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Gavel" class="rounded shadow-xl w-full h-80 object-cover transform translate-y-12" />
+					<img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Team Meeting" class="rounded shadow-xl w-full h-96 object-cover -translate-y-6" />
+					<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl z-0"></div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Services Preview Section -->
-	<section id="services" class="py-24 bg-slate-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center mb-16 max-w-3xl mx-auto">
-				<h2 class="text-4xl font-serif font-bold text-slate-900 mb-6">Our Practice Areas</h2>
-				<p class="text-lg text-slate-600 font-light">
-					Austrindo Law Office provides high-quality legal services tailored to the needs of our clients, both local and international.
-				</p>
+	<!-- Stats Section -->
+	<section class="py-20 bg-slate-900 text-white border-y border-slate-800">
+		<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+			<div class="space-y-2">
+				<div class="text-5xl font-serif font-bold text-amber-500">20+</div>
+				<div class="text-sm uppercase tracking-widest text-slate-400">Years Experience</div>
 			</div>
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-				{[
-					{ title: "Criminal Law", icon: "scale", desc: "Defense and representation for clients facing criminal charges." },
-					{ title: "Civil Law", icon: "document", desc: "Resolving private disputes, contracts, and property rights." },
-					{ title: "Corporate Law", icon: "building", desc: "Formation, operation, and dissolution of businesses." },
-					{ title: "Immigration", icon: "globe", desc: "Visas, residency, citizenship, and foreign rights in Indonesia." }
-				].map((service) => (
-					<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
-						<div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-900 mb-6 group-hover:bg-blue-900 group-hover:text-white transition-colors">
-							<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold text-slate-900 mb-3 font-serif">{service.title}</h3>
-						<p class="text-slate-600 text-sm leading-relaxed mb-4">{service.desc}</p>
-						<a href="/services" class="text-blue-700 text-sm font-semibold hover:text-blue-900">Learn More &rarr;</a>
-					</div>
-				))}
+			<div class="space-y-2">
+				<div class="text-5xl font-serif font-bold text-amber-500">500+</div>
+				<div class="text-sm uppercase tracking-widest text-slate-400">Cases Won</div>
 			</div>
-			
-			<div class="text-center mt-12">
-				<a href="/services" class="inline-block border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-3 px-8 rounded transition-colors duration-300">
-					View All Services
-				</a>
+			<div class="space-y-2">
+				<div class="text-5xl font-serif font-bold text-amber-500">100%</div>
+				<div class="text-sm uppercase tracking-widest text-slate-400">Dedication</div>
+			</div>
+			<div class="space-y-2">
+				<div class="text-5xl font-serif font-bold text-amber-500">Intl</div>
+				<div class="text-sm uppercase tracking-widest text-slate-400">Global Reach</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- CTA Section -->
-	<section class="py-20 bg-blue-900 text-white relative overflow-hidden">
-		<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-		<div class="relative max-w-5xl mx-auto px-4 text-center">
-			<h2 class="text-3xl md:text-5xl font-serif font-bold mb-6">Need Legal Assistance?</h2>
-			<p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light">
-				We are ready to assist you with your legal needs and provide effective and reliable solutions.
+	<!-- Practice Areas Preview -->
+	<section id="services" class="py-32 bg-white">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="text-center mb-20 space-y-4 max-w-3xl mx-auto">
+				<h3 class="text-amber-700 font-bold uppercase tracking-[0.2em] text-sm">Our Expertise</h3>
+				<h2 class="text-5xl font-serif font-bold text-slate-900">Comprehensive Legal Solutions</h2>
+				<p class="text-lg text-slate-500 font-light pt-4">Tailored strategies for complex challenges.</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+				<!-- Service 1 -->
+				<div class="group relative bg-white border border-slate-100 p-10 hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 hover:-translate-y-2">
+					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+					<div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-700 mb-8 group-hover:bg-amber-50 group-hover:text-amber-600 transition-colors">
+						<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+					</div>
+					<h3 class="text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors">Criminal Defense</h3>
+					<p class="text-slate-500 mb-8 leading-relaxed font-light">Robust representation for offenses against the state or society, ensuring your rights are protected at every stage.</p>
+					<a href="/services" class="text-sm font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-900 transition-colors flex items-center gap-2">Read More <span class="text-lg">&rarr;</span></a>
+				</div>
+
+				<!-- Service 2 -->
+				<div class="group relative bg-white border border-slate-100 p-10 hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 hover:-translate-y-2">
+					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+					<div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-700 mb-8 group-hover:bg-amber-50 group-hover:text-amber-600 transition-colors">
+						<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+					</div>
+					<h3 class="text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors">Corporate Law</h3>
+					<p class="text-slate-500 mb-8 leading-relaxed font-light">From formation to dissolution, we guide businesses through complex regulatory frameworks and commercial disputes.</p>
+					<a href="/services" class="text-sm font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-900 transition-colors flex items-center gap-2">Read More <span class="text-lg">&rarr;</span></a>
+				</div>
+
+				<!-- Service 3 -->
+				<div class="group relative bg-white border border-slate-100 p-10 hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 hover:-translate-y-2">
+					<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+					<div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-700 mb-8 group-hover:bg-amber-50 group-hover:text-amber-600 transition-colors">
+						<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+					</div>
+					<h3 class="text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors">Immigration</h3>
+					<p class="text-slate-500 mb-8 leading-relaxed font-light">Seamless guidance for international clients on visas, residency, and citizenship rights within Indonesia.</p>
+					<a href="/services" class="text-sm font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-900 transition-colors flex items-center gap-2">Read More <span class="text-lg">&rarr;</span></a>
+				</div>
+			</div>
+
+			<div class="mt-16 text-center">
+				<a href="/services" class="inline-block border border-slate-300 text-slate-600 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:border-amber-600 hover:text-amber-600 transition-colors">View All Practice Areas</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-24 relative bg-slate-900 overflow-hidden">
+		<!-- Decorative Background -->
+		<div class="absolute top-0 right-0 w-1/2 h-full bg-slate-800 skew-x-12 transform translate-x-20 opacity-50"></div>
+		
+		<div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+			<h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Secure Your Legal Future Today</h2>
+			<p class="text-xl text-slate-300 mb-12 font-light max-w-3xl mx-auto">
+				Complex legal matters require sophisticated solutions. Let our team provide the clarity and advocacy you deserve.
 			</p>
-			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/contact" class="bg-white text-blue-900 font-bold py-4 px-8 rounded shadow-lg hover:bg-gray-100 transition-colors">
-					Contact Us Now
-				</a>
-				<a href="tel:+628170902111" class="border-2 border-white text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-blue-900 transition-colors">
-					+62 817 090 2111
-				</a>
+			<div class="flex flex-col sm:flex-row justify-center gap-6">
+				<a href="/contact" class="bg-amber-600 text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-amber-700 transition-colors shadow-xl">Contact Us</a>
+				<a href="tel:+628170902111" class="border border-slate-500 text-slate-300 px-10 py-4 font-bold uppercase tracking-widest hover:border-white hover:text-white transition-colors">+62 817 090 2111</a>
 			</div>
 		</div>
 	</section>
